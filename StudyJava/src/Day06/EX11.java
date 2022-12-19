@@ -9,18 +9,18 @@ import java.util.TreeSet;
 public class EX11 {
 public static void main(String[] args) {
 	
-	TreeSet set = new TreeSet(new Comparator) {
+	TreeSet set = new TreeSet(new Comparator()) {
 		if(o1 instanceof Student && o2 instanceof Student) {
 			
 		}
 	}
 		
 		ArrayList list = new ArrayList();
-		list.add(new Student("홍길동",1,1,100,100,100)); 
-		list.add(new Student("남궁성",1,2,90,70,80)); 
-		list.add(new Student("김자바",1,3,80,80,90)); 
-		list.add(new Student("이자바",1,4,70,90,70)); 
-		list.add(new Student("안자바",1,5,60,100,80));
+		list.add(new Student2("홍길동",1,1,100,100,100)); 
+		list.add(new Student2("남궁성",1,2,90,70,80)); 
+		list.add(new Student2("김자바",1,3,80,80,90)); 
+		list.add(new Student2("이자바",1,4,70,90,70)); 
+		list.add(new Student2("안자바",1,5,60,100,80));
 		
 		Collections.sort(list);
 		Iterator it = list.iterator();
@@ -32,7 +32,7 @@ public static void main(String[] args) {
 
 }
 
-class Student implements Comparable{
+class Student2 implements Comparable{
 	
 	String name;
 	int ban;
@@ -42,7 +42,7 @@ class Student implements Comparable{
 	public Student() {
 	}
 
-	public Student(String name, int ban, int no, int kor, int eng, int math) {
+	public Student2(String name, int ban, int no, int kor, int eng, int math) {
 		super();
 		this.name = name;
 		this.ban = ban;
